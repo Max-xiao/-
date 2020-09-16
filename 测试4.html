@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>div样式</title>
+        <meta charset = "utf-8">
+        <!-- 使用CSS样式来控制div布局 -->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script src="js1.js"></script>
+	</head>
+	<body>
+        <!-- 在这里控制全局的页面，定义div的id是"global" -->
+        <div id="global">
+        <div id="heading">我是头部的布局</div>
+<!--  以下是按钮   -->			
+<div id="content_menu">
+<input type="text" id="final" cols="30" rows="10" value=""><br>
+<table>
+<tr>
+<td colspan="1">
+<td><input type="button" class="dif" value="dif1" id="dif1" onclick="append_label('dif1')"></td>
+<td><input type="button" class="methrod" value="method1" id="method1" onclick="append_label('method1')"><td>
+<td><input type="button" class="type" value="type1" id="type1" onclick="append_label('type1')"><td>
+</td>
+</tr>
+<tr>
+<td colspan="1">
+<td><input type="button" class="dif" value="dif2" id="dif2" onclick="append_label('dif2')"></td>
+<td><input type="button" class="methrod" value="method2" id="method2" onclick="append_label('method2')"><td>
+<td><input type="button" class="type" value="type2" id="type2" onclick="append_label('type2')"><td>
+</td>
+</tr>
+</table>
+<input type="button" class="button" value="为选中的部分增加标记" onclick="boldSelection()">
+<br>
+<input type="button" class="button" value="将选中的部分删除" onclick="boldSelectio('AAA','BBB')">
+<br>
+<input type="button" class="button" value="保存" onclick="boldSelecti()">
+<br>
+			</div>
+<!--  以下测试文字   -->
+
+
+<!-- 模板文件，利用HTML代码展示数据 -->
+<div id="idnumber">
+     <?php foreach($records as $row) : ?>
+     <?php echo $row['id'];?>
+     <?php endForeach;?>
+</div>
+<div id="content_body">
+	<div>
+		<span id="asd">
+     <?php foreach($records as $row) : ?>
+     <?php echo $row['data'];?>
+     <?php endForeach;?>
+
+		</span>
+	</div>
+<form action="submit.php" method="POST">
+	<br>将要上传的内容:<br>
+        <input type="text" id="firstname" name="name1" cols="30" rows="10" value="">
+		<input type="text" id="id1" name="name2" cols="30" rows="10" value="">
+	<br><br><br>
+	<input type="submit" value="Submit">
+</form> 
+</div>
+<!--  以下底部   -->
+            <div id="floor">我在最下面，抢不到沙发，坐个地板可以吧</div>
+        </div>
+    </body>
+</html>

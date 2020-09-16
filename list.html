@@ -1,0 +1,25 @@
+<!-- 模板文件，利用HTML代码展示数据 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>目录</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>id</th><th>data</th><th>change</th>
+    </tr>
+    <?php foreach($records as $row) : ?>
+    <tr>
+        <td id=><a href="ku.php?id=<?php echo $row['id'];?>"/><?php echo $row['id'];?></a></td>
+        <td><?php echo $row['data'];?></td>
+		<td><?php echo $row['change'];?></td>
+    </tr>
+    <?php endForeach;?>
+</table>
+
+
+</body>
+</html>
